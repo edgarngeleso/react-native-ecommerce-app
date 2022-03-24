@@ -146,8 +146,10 @@ const Profile = ({navigation})=>{
                 <Modal
                     animationType="slide"
                     visible={AdminSupplierModalOpen}
-                    onRequestClose={()=>setAdminSupplierModalOpen(false)}
-                    
+                    onRequestClose={()=>{
+                        setisEditOpen(0);
+                        setAdminSupplierModalOpen(false);
+                    }}
                 >
                     <View style={{
                         backgroundColor:app_theme.app_primary,
